@@ -7,7 +7,8 @@ const args = process.argv.slice(2);
 const client = new net.Socket();
 client.connect(PORT, HOST, () => {
   console.log(`CONNECTED TO: ${HOST}:${PORT}`);
-  // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client
+  // Write a message to the socket as soon as the client is connected,
+  // the server will receive it as message from the client
 
   if (typeof args[0] !== 'undefined' && args[0] !== null) {
     client.write(args[0]);
